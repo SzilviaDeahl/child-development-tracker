@@ -1,6 +1,10 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('http://aehbuilders.com/wp-content/uploads/2014/05/old-wood-floorboards-wooden-background-texture.jpg');
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
 }
 
 a {
