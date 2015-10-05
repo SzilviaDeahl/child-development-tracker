@@ -9,23 +9,31 @@
   <body>
     <h1 class='title'>Welcome to your online baby book</h1>
     <br>
-    <form>
+    <form class='addchild'>
+      <h4>Add a Child</h4>
       <div class='form-group'>
         <br>
-        <label for='height'>Enter height:</label>
-        <input id='height' type='integer' name='height'>
+        <label for='first'>First Name:</label>
+        <input id='first' type='integer' name='first'>
       </div>
       <div class='form-group'>
-        <label for='weight'>Enter weight:</label>
-        <input  id='weight' type='integer' name='weight'>
+        <label for='middle'>Middle Name</label>
+        <input  id='middle' type='integer' name='middle'>
       </div>
       <div class='form-group'>
-        <label for='age'>Enter age</label>
-        <input id='age' type='text' name='age'>
+        <label for='last'>Last Name</label>
+        <input id='last' type='text' name='last'>
       </div>
       <div class='form-group'>
-        <label for='favorite_food'>Favorite Food</label>
-        <input id='favorite_food' type='text' name='favfood'>
+        <label for='dob'>Date of Birth</label>
+        <input id='dob' type='date' name='dob'>
+      </div>
+      <div class='form-group'>
+        <p>Sex</p>
+        <input type='radio' value='Female'>
+        <label for='girl'> Boy </label>
+        <input type='radio' value='Female'>
+        <label for='girl'> Girl </label>
       </div>
       <div class='button'>
         <button type='submit'>Submit</button>

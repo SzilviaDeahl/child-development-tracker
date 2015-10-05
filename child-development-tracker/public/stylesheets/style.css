@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url('http://aehbuilders.com/wp-content/uploads/2014/05/old-wood-floorboards-wooden-background-texture.jpg');
+  background-image: url('http://wallpaperput.com/wp-content/uploads/2014/09/light-blue-abstract-design-best-HD-wallpaper.jpg');
   background-repeat: no-repeat;
   text-align: center;
 }
@@ -10,10 +10,22 @@ a {
   color: #00B7FF;
 }
 
-.title {
+/*.title {
   color: white;
 }
 
 .form-group {
   color: white;
+}*/
+
+canvas {
+  background-color: lightyellow;
+  border: 2px solid blue;
+}
+
+.addchild {
+  border: 1px solid lightyellow;
+  border-radius: 20px;
+  width: 30%;
+  padding: 20px;
 }
