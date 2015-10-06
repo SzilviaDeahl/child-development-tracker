@@ -37,10 +37,6 @@ img {
   border: 0.5px dotted blue;
 }
 
-.nav.navbar-nav.active.a {
-  background-color: #CDE3F0;
-}
-
 label {
   float: left;
 }
