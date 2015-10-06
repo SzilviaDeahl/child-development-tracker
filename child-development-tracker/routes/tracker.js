@@ -9,4 +9,14 @@ router.get('/', function (req, res, next) {
   })
 });
 
+router.get('/new', function (req, res, next) {
+  res.render('new')
+});
+
+router.post('/create', function (req, res, next) {
+  trackerCollection.insert(req.body).then(function (err, record) {
+    res.redirect('/index')
+  })
+});
+
 module.exports = router;

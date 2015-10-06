@@ -1,47 +1,93 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='myTracker'>
   <head>
     <meta charset="utf-8">
     <title>Development Tracker</title>
     <link rel="stylesheet" href='stylesheets/style.css'>
     <link rel="stylesheet" href='bower_components/bootstrap/dist/css/bootstrap.min.css'>
   </head>
-  <body>
+  <body ng-controller='MainController'>
     <h1 class='title'>Welcome to your online baby book</h1>
     <br>
-    <form class='addchild'>
-      <h4>Add a Child</h4>
-      <div class='form-group'>
-        <br>
-        <label for='first'>First Name:</label>
-        <input id='first' type='integer' name='first'>
+    <div class=container-fluid>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <img alt="Brand" src="http://www.clipartbest.com/cliparts/dc8/5aG/dc85aGkce.png">
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#" ng-click='toggleForm()' aria-hidden="true"> Add Child</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#" ng-click = 'mile = !mile' aria-hidden="true">Milestones</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="#" ng-click='toggleLogin()' aria-hidden="true">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div ng-show='showLogin'>
+          <form class='login'>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+          </form>
+        </div>
+        {{1+3}}
+      <form ng-show='showForm' class='addchild'>
+        <h4>Add a Child</h4>
+        <div class='form-group'>
+          <br>
+          <label for='first'>First Name</label>
+          <input class='form-control' id='first' type='integer' name='first'>
+        </div>
+        <div class='form-group'>
+          <label for='middle'>Middle Name</label>
+          <input class='form-control' id='middle' type='integer' name='middle'>
+        </div>
+        <div class='form-group'>
+          <label for='last'>Last Name</label>
+          <input class='form-control' id='last' type='text' name='last'>
+        </div>
+        <div class='form-group'>
+          <label for='dob'>Date of Birth</label>
+          <input class='form-control' id='dob' type='date' name='dob'>
+        </div>
+        <div class='form-group'>
+          <p>Sex</p>
+          <label for='girl'> Boy </label>
+          <input type='radio' value='Female'>
+          <label for='girl'> Girl </label>
+          <input type='radio' value='Female'>
+        </div>
+        <div class='button'>
+          <button type='submit'>Submit</button>
+        </div>
+      </form>
+      <div ng-show='mile'>
+        <a href='http://www.cdc.gov/ncbddd/actearly/milestones/milestones-2mo.html'>2 months</a>
+        <a href='http://www.cdc.gov/ncbddd/actearly/milestones/milestones-4mo.html'>4 months</a>
+        <a href='http://www.cdc.gov/ncbddd/actearly/milestones/milestones-6mo.html'>6 months</a>
+        <a href='http://www.cdc.gov/ncbddd/actearly/milestones/milestones-9mo.html'>9 months</a>
+        <a href='http://www.cdc.gov/ncbddd/actearly/milestones/milestones-1yr.html'>1 year</a>
+        <a href='http://www.cdc.gov/ncbddd/actearly/milestones/milestones-18mo.html'>18 months</a>
+        <a href='http://www.cdc.gov/ncbddd/actearly/milestones/milestones-2yr.html'>2 years</a>
+        <a href='http://www.cdc.gov/ncbddd/actearly/milestones/milestones-3yr.html'>3 years</a>
+        <a href='http://www.cdc.gov/ncbddd/actearly/milestones/milestones-4yr.html'>4 years</a>
+        <a href='http://www.cdc.gov/ncbddd/actearly/milestones/milestones-5yr.html'>5 years</a>
       </div>
-      <div class='form-group'>
-        <label for='middle'>Middle Name</label>
-        <input  id='middle' type='integer' name='middle'>
-      </div>
-      <div class='form-group'>
-        <label for='last'>Last Name</label>
-        <input id='last' type='text' name='last'>
-      </div>
-      <div class='form-group'>
-        <label for='dob'>Date of Birth</label>
-        <input id='dob' type='date' name='dob'>
-      </div>
-      <div class='form-group'>
-        <p>Sex</p>
-        <input type='radio' value='Female'>
-        <label for='girl'> Boy </label>
-        <input type='radio' value='Female'>
-        <label for='girl'> Girl </label>
-      </div>
-      <div class='button'>
-        <button type='submit'>Submit</button>
-      </div>
-    </form>
-    <script type="text/javascript" src='app.js'></script>
+    </div>
     <!-- <script type="text/javascript" src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script> -->
     <script type="text/javascript" src='bower_components/angular/angular.min.js'></script>
+    <script type="text/javascript" src='app.js'></script>
     <script type="text/javascript" src='bower_components/jquery/dist/jquery.min.js'></script>
   </body>
 </html>
