@@ -1,4 +1,5 @@
-var app = angular.module('myTracker', []);
+var app = angular.module('myTracker', ['ngRoute']);
+
 app.controller('MainController', function ($scope) {
   $scope.showForm = false;
   $scope.showLogin = false;
@@ -19,4 +20,12 @@ app.controller('MainController', function ($scope) {
     $scope.child = {};
     console.log($scope.children);
   }
+});
+
+app.config(function ($routeProvider) {
+  $routeProvider
+  .when('/', {
+    templateUrl: '/partials/profile.html',
+    controller: 'MainController'
+  })
 });
