@@ -12,4 +12,11 @@ app.controller('MainController', function ($scope) {
   //   $scope.posts.push($scope.post);
   //   $scope.post = {};
   // }
+  $scope.children = [{}];
+  $scope.createChild = function () {
+    $scope.children.push($scope.child);
+    $scope.showForm = !$scope.showForm;
+    $scope.child = {};
+    console.log($scope.children);
+  }
 });
