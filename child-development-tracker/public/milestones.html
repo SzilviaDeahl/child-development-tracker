@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app='myTracker'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href='stylesheets/style.css'>
+    <link rel="stylesheet" href='bower_components/bootstrap/dist/css/bootstrap.min.css'>
+    <title>Milestones</title>
+  </head>
+  <body ng-controller='MainController'>
+    <h1>Milestones</h1>
+    <form class="form-horizontal">
+      <div class='form-group'>
+        <br>
+        <label for='smile'>First Smile</label>
+        <input class='form-control' id='smile' type='date' name='smile'>
+        <label for='comment1'>Comment</label>
+        <input class='form-control' id='comment1' type='text' name='comment1'>
+      </div>
+      <div class='form-group'>
+        <label for='sound'>First Sound</label>
+        <input class='form-control' id='sound' type='date' name='sound'>
+        <label for='comment2'>Comment</label>
+        <input class='form-control' id='comment2' type='text' name='comment2'>
+      </div>
+      <div class='form-group'>
+        <label for='holdHead'>Holds head up</label>
+        <input class='form-control' id='holdHead' type='date' name='holdHead'>
+        <label for='comment3'>Comment</label>
+        <input class='form-control' id='comment3' type='text' name='comment3'>
+      </div>
+      <div class='form-group'>
+        <label for='rolls'>Rolls over</label>
+        <input class='form-control' id='rolls' type='date' name='rolls'>
+        <label for='comment4'>Comment</label>
+        <input class='form-control' id='comment4' type='text' name='comment4'>
+      </div>
+      <div class='form-group'>
+        <label for='sitUp'>Sits up</label>
+        <input class='form-control' id='sitUp' type='date' name='sitUp'>
+        <label for='comment5'>Comment</label>
+        <input class='form-control' id='comment5' type='text' name='comment5'>
+      </div>
+      <div class='form-group'>
+        <label for='crawl'>Crawls</label>
+        <input class='form-control' id='crawl' type='date' name='crawl'>
+        <label for='comment6'>Comment</label>
+        <input class='form-control' id='comment6' type='text' name='comment6'>
+      </div>
+      <div class='form-group'>
+        <label for='supportStand'>Stands with support</label>
+        <input class='form-control' id='supportStand' type='date' name='supportStand'>
+        <label for='comment7'>Comment</label>
+        <input class='form-control' id='comment7' type='text' name='comment7'>
+      </div>
+      <div class="form-group">
+        <label for="aloneStand">Stands alone</label>
+        <input class='form-control' id='aloneStand' type="date" name='aloneStand'>
+        <label for='comment8'>Comment</label>
+        <input class='form-control' id='comment8' type='text' name='comment8'>
+      </div>
+      <div class='form-group'>
+        <label for='helpWalk'>Walks with help</label>
+        <input class='form-control' id='helpWalk' type='date' name='helpWalk'>
+        <label for='comment9'>Comment</label>
+        <input class='form-control' id='comment9' type='text' name='comment9'>
+      </div>
+      <div class='form-group'>
+        <label for='aloneWalk'>Walks alone</label>
+        <input class='form-control' id='aloneWalk' type='date' name='aloneWalk'>
+        <label for='comment10'>Comment</label>
+        <input class='form-control' id='comment10' type='text' name='comment10'>
+      </div>
+      <div class='form-group'>
+        <label for='firstWords'>First words</label>
+        <input class='form-control' id='firstWords' type='date' name='firstWords'>
+        <label for='comment11'>Comment</label>
+        <input class='form-control' id='comment11' type='text' name='comment11'>
+      </div>
+      <div class='form-group'>
+        <label for='favSongs'>Favorite songs</label>
+        <input class='form-control' id='favSongs' type='text' name='favSongs'>
+      </div>
+      <div class='form-group'>
+        <label for='favStory'>Favorite story</label>
+        <input class='form-control' id='favStory' type='text' name='favStory'>
+      </div>
+      <div class='button'>
+        <button type='submit' ng-click='createChild()'>Submit</button>
+      </div>
+    </form>
+
+    <script type="text/javascript" src='bower_components/angular/angular.min.js'></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src='app.js'></script>
+    <script type="text/javascript" src='bower_components/jquery/dist/jquery.min.js'></script>
+    <script type="text/javascript" src='javascripts/controllers/profile_controller.js'></script>
+    <script type="text/javascript" src='javascripts/services/profile_service.js'></script>
+  </body>
+</html>

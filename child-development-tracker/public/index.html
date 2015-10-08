@@ -59,26 +59,26 @@
         <div class='form-group'>
           <br>
           <label for='first'>First Name</label>
-          <input class='form-control' id='first' type='integer' name='first'>
+          <input ng-model='newChild.first' class='form-control' id='first' type='integer' name='first'>
         </div>
         <div class='form-group'>
           <label for='middle'>Middle Name</label>
-          <input class='form-control' id='middle' type='integer' name='middle'>
+          <input ng-model='newChild.middle' class='form-control' id='middle' type='integer' name='middle'>
         </div>
         <div class='form-group'>
           <label for='last'>Last Name</label>
-          <input class='form-control' id='last' type='text' name='last'>
+          <input ng-model='newChild.last' class='form-control' id='last' type='text' name='last'>
         </div>
         <div class='form-group'>
           <label for='dob'>Date of Birth</label>
-          <input class='form-control' id='dob' type='date' name='dob'>
+          <input ng-model='newChild.dob' class='form-control' id='dob' type='date' name='dob'>
         </div>
         <div class='form-group'>
           <p>Sex</p>
-          <label for='girl'> Boy </label>
-          <input type='radio' value='Female'>
           <label for='girl'> Girl </label>
-          <input type='radio' value='Female'>
+          <input ng-model='newChild.girl' type='radio' value='Female'>
+          <label for='boy'> Boy </label>
+          <input ng-model='newChild.boy' type='radio' value='Male'>
         </div>
         <div class='button'>
           <button type='submit' ng-click='createChild()'>Submit</button>
@@ -96,6 +96,7 @@
         <a href='http://www.cdc.gov/ncbddd/actearly/milestones/milestones-4yr.html' class='links'>4 years</a>
         <a href='http://www.cdc.gov/ncbddd/actearly/milestones/milestones-5yr.html' class='links'>5 years</a>
       </div>
+      <div ng-view></div>
     </div>
     <script type="text/javascript" src='bower_components/angular/angular.min.js'></script>
     <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>

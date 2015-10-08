@@ -1,0 +1,12 @@
+<h1>All Posts</h1>
+<div ng-repeat="child in children" class="well">
+    <img class="thumbnail pull-left" ng-src="{{child.image}}" />
+    <h3>
+    {{child.first}}
+    {{child.middle}}
+    {{child.last}}
+    </h3>
+    <p>
+      {{child.dob}}
+    </p>
+</div>
