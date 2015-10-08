@@ -19,7 +19,7 @@
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#" ng-click='toggleForm()' aria-hidden="true" style="background-color: #EDF6FB"> Add Child</a></li>
+              <li class="active"><a href="#" ng-click='toggleForm("add")' aria-hidden="true" style="background-color: #EDF6FB"> Add Child</a></li>
             </ul>
             <ul class="nav navbar-nav">
               <li class="active"><a href="#" ng-click = 'mile = !mile' aria-hidden="true" style="background-color: #EDF6FB">Milestones</a></li>
@@ -54,31 +54,31 @@
           </form>
         </div>
         {{1+3}}
-      <form ng-show='showForm' class='addchild'>
+      <form ng-show='showForm.add' class='addchild'>
         <h4>Add a Child</h4>
         <div class='form-group'>
           <br>
           <label for='first'>First Name</label>
-          <input ng-model='newChild.first' class='form-control' id='first' type='integer' name='first'>
+          <input ng-model='child.first' class='form-control' id='first' type='integer'>
         </div>
         <div class='form-group'>
           <label for='middle'>Middle Name</label>
-          <input ng-model='newChild.middle' class='form-control' id='middle' type='integer' name='middle'>
+          <input ng-model='child.middle' class='form-control' id='middle' type='integer'>
         </div>
         <div class='form-group'>
           <label for='last'>Last Name</label>
-          <input ng-model='newChild.last' class='form-control' id='last' type='text' name='last'>
+          <input ng-model='child.last' class='form-control' id='last' type='text'>
         </div>
         <div class='form-group'>
           <label for='dob'>Date of Birth</label>
-          <input ng-model='newChild.dob' class='form-control' id='dob' type='date' name='dob'>
+          <input ng-model='child.dob' class='form-control' id='dob' type='date'>
         </div>
         <div class='form-group'>
           <p>Sex</p>
           <label for='girl'> Girl </label>
-          <input ng-model='newChild.girl' type='radio' value='Female'>
+          <input ng-model='child.girl' type='radio' value='Female'>
           <label for='boy'> Boy </label>
-          <input ng-model='newChild.boy' type='radio' value='Male'>
+          <input ng-model='child.boy' type='radio' value='Male'>
         </div>
         <div class='button'>
           <button type='submit' ng-click='createChild()'>Submit</button>

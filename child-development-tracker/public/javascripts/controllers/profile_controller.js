@@ -1,10 +1,25 @@
 var app = angular.module('myTracker', ['ngRoute']);
 
 app.controller('MainController', function ($scope, ProfileService) {
-  $scope.showForm = false;
+  $scope.showForm = {
+    add: false,
+    smile: false,
+    sound: false,
+    head: false,
+    roll: false,
+    sit: false,
+    crawl: false,
+    helpStand: false,
+    aloneStand: false,
+    helpWalk: false,
+    aloneWalk: false,
+    word: false,
+    song: false,
+    story: false
+  };
   $scope.showLogin = false;
-  $scope.toggleForm = function () {
-    $scope.showForm = !$scope.showForm;
+  $scope.toggleForm = function (form) {
+    $scope.showForm[form] = !$scope.showForm[form];
   }
   $scope.toggleLogin = function () {
     $scope.showLogin = !$scope.showLogin;
@@ -13,19 +28,14 @@ app.controller('MainController', function ($scope, ProfileService) {
   //   $scope.posts.push($scope.post);
   //   $scope.post = {};
   // }
-  $scope.children = [{}];
   $scope.createChild = function () {
-    $scope.children.push($scope.child);
-    $scope.showForm = !$scope.showForm;
-    $scope.child = {};
-    console.log($scope.children);
-    console.log($scope.child);
+    ProfileService.create($scope.child).then(function (response) {
+      console.log("DONZO");
+      // after db instert redirect user to the show page for the profile they
+      // just created
+    })
   }
-
-  ProfileService.all().then(function (children) {
-    $scope.children = children;
-  })
-})
+});
 
 app.config(function ($routeProvider) {
   $routeProvider
