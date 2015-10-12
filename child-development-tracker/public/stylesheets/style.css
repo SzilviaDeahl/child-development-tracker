@@ -52,3 +52,13 @@ label {
 .links {
   font-size: 20px;
 }
+
+.growthTable {
+  border: 2px solid blue;
+}
+
+tr {
+   border-right: 2px solid lightblue;
+   border-bottom:2px solid lightblue;
+   border-collapse: collapse;
+ }
