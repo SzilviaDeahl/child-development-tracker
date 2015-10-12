@@ -1,4 +1,4 @@
-app.controller('MainController', function ($scope, ProfileService) {
+app.controller('MainController', function ($scope, ProfileService, $location) {
 
   ProfileService.all().then(function (profiles) {
    $scope.profiles = profiles;
@@ -33,9 +33,19 @@ app.controller('MainController', function ($scope, ProfileService) {
 
   var child = {};
   $scope.createChild = function (child) {
-    console.log(child);
     ProfileService.create(child).then(function (response) {
-      console.log("DONZO");
+      console.log(response);
+      $scope.child = response;
+      console.log($scope.child._id);
+      // redirect to somewhere
+      $location.path('/profiles');
     });
   };
+  // $scope.editChild = function (child) {
+  //   ProfileService.update(_id: $scope.childId).then(function (response) {
+  //     // $scope.childId = response._id;
+  //     // console.log($routeParams.id);
+  //     $location.path('/profiles');
+  //   });
+  // };
 });

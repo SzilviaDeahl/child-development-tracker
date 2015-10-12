@@ -1,11 +1,11 @@
-<h1>All Posts</h1>
+<h1>Edit Profile</h1>
 <div ng-repeat="child in profiles" class="well">
-    <!-- <img class="thumbnail pull-left" ng-src="{{child.image}}" /> -->
-    <a ng-href='#/profiles/{{child._id}}/edit'>
+    <img class="thumbnail pull-left" ng-src="{{child.image}}" />
+    <h4>
       {{child.first}}
       {{child.middle}}
       {{child.last}}
-    </a>
+    </h4>
     <p>
       Born on {{child.date | date: 'MMM dd, yyyy'}} at
       {{ child.time | date: "h:mma"}}

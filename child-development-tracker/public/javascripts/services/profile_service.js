@@ -6,18 +6,21 @@ app.factory('ProfileService', function ($http) {
       })
     },
     create: function (profile) {
-      console.log("i'm here in services");
       return $http.post('/api/profiles', profile).then(function (response) {
         if(response.data){
-          console.log('I am created');
+          return response.data;
         }
       })
     },
-    show: function (milestones) {
-      return $http.get('api/milestones').then(function (response) {
+    show: function () {
+      return $http.get('/partials').then(function (response) {
         return response.data
       })
     },
-    
+    // update: function () {
+    //   return $http.post('/profiles/:id/edit').then(function (response) {
+    //     return response.data;
+    //   })
+    // }
   }
 })
