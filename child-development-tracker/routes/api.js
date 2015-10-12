@@ -22,4 +22,10 @@ router.post('/profiles', function (req, res, next) {
   })
 });
 
+router.get('/milestones', function (req, res, next) {
+  Profile.findOne({_id: req.params.id}).then(function (profiles) {
+    res.json('milestones')
+  })
+});
+
 module.exports = router;

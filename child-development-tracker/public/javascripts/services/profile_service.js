@@ -13,5 +13,11 @@ app.factory('ProfileService', function ($http) {
         }
       })
     },
+    show: function (milestones) {
+      return $http.get('api/milestones').then(function (response) {
+        return response.data
+      })
+    },
+    
   }
 })
